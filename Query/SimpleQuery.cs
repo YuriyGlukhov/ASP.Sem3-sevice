@@ -7,7 +7,6 @@ namespace GraphQlStorage.Query
     {
         public async Task<List<ProductDTO>> GetProductsByStorage([Service] StorageService productService, int id)
         {
-            // Асинхронно получаем список продуктов, используя сервис
             return await productService.GetProductsInStorage(id);
         }
     }
